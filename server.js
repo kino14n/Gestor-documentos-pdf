@@ -212,7 +212,7 @@ app.post('/api/search', (req, res) => {
     while(codesLeft.size > 0 && docsArray.length > 0) {
       let bestDocIndex = -1;
       let bestCoverCount = -1;
-      for(let i = 0; i  docsArray.length; i++) {
+      for (let i = 0; i < docsArray.length; i++) {
         const coverCount = [...docsArray[i].codesFound].filter(c => codesLeft.has(c)).length;
         if (coverCount > bestCoverCount) {
           bestCoverCount = coverCount;
